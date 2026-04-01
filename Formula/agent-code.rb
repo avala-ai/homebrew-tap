@@ -1,26 +1,26 @@
 class AgentCode < Formula
   desc "AI-powered coding agent for the terminal, written in pure Rust"
   homepage "https://github.com/avala-ai/agent-code"
-  version "0.6.1"
+  version "0.9.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/avala-ai/agent-code/releases/download/v0.6.1/agent-macos-aarch64.tar.gz"
-      sha256 "2b533d52ad9acadcd983886bb131eda10d777b6c83a71bf9099e64d7f6c9c1a1"
+      url "https://github.com/avala-ai/agent-code/releases/download/v0.9.2/agent-macos-aarch64.tar.gz"
+      sha256 "f798f1389b7f8662521bf0428fef717d1a8c452b8dc1e6316a85ad255fda439c"
     else
-      url "https://github.com/avala-ai/agent-code/releases/download/v0.6.1/agent-macos-x86_64.tar.gz"
-      sha256 "08b2a5076d4ac7e2f3a34c4a19e15ff86ecdd20c9c42b6a295bae7ee26967d47"
+      url "https://github.com/avala-ai/agent-code/releases/download/v0.9.2/agent-macos-x86_64.tar.gz"
+      sha256 "e4bdffa1de4eee92e8138c1996c782a520c8c48effeae0f8113f8b23c8008b8f"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/avala-ai/agent-code/releases/download/v0.6.1/agent-linux-aarch64.tar.gz"
-      sha256 "644730373fe2ac1d61f9ddaa475c62683df6cead79d42131b5266bf63c576154"
+      url "https://github.com/avala-ai/agent-code/releases/download/v0.9.2/agent-linux-aarch64.tar.gz"
+      sha256 "c43f5e7a1dc46e4cf17cc23e882c0dba27c1cc0805ab1a9141758fa4b9194edb"
     else
-      url "https://github.com/avala-ai/agent-code/releases/download/v0.6.1/agent-linux-x86_64.tar.gz"
-      sha256 "91f0f0def49f3f4dbe2a6260756ad0593c4f279f434bfa5c4ac713674d52cd48"
+      url "https://github.com/avala-ai/agent-code/releases/download/v0.9.2/agent-linux-x86_64.tar.gz"
+      sha256 "d762efb2e541eddd29353767736a72ad7730b35edad7f7dbdcf8ce25399a527b"
     end
   end
 
@@ -29,6 +29,6 @@ class AgentCode < Formula
   end
 
   test do
-    assert_match "agent 0.6.1", shell_output("#{bin}/agent --version")
+    assert_match "agent 0.9.2", shell_output("#{bin}/agent --version")
   end
 end
