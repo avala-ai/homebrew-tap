@@ -1,26 +1,26 @@
 class AgentCode < Formula
   desc "AI-powered coding agent for the terminal, written in pure Rust"
   homepage "https://github.com/avala-ai/agent-code"
-  version "0.15.3"
+  version "0.16.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/avala-ai/agent-code/releases/download/v0.15.3/agent-macos-aarch64.tar.gz"
-      sha256 "6ec7d4198b6f00e0d3e5bf5e9bafaaeff07ffc8bfb8378c3d3d15d151fb4852c"
+      url "https://github.com/avala-ai/agent-code/releases/download/v0.16.0/agent-macos-aarch64.tar.gz"
+      sha256 "8119c2eb0157f7c09ee1f6d14f5d51b21f5ecc77cf72b07626d6ea54d2d8287c"
     else
-      url "https://github.com/avala-ai/agent-code/releases/download/v0.15.3/agent-macos-x86_64.tar.gz"
-      sha256 "bead683c995671f85b94e3e4ca164fe2b4e24f4a1af3f65ce61b022e90080c92"
+      url "https://github.com/avala-ai/agent-code/releases/download/v0.16.0/agent-macos-x86_64.tar.gz"
+      sha256 "a04a7bd9c16597414fc8cb2d7810527da122e40f7bf8560622e100f306ea7eb8"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/avala-ai/agent-code/releases/download/v0.15.3/agent-linux-aarch64.tar.gz"
-      sha256 "de805fcc06c2815c842d0a4030c6295804668046ddaf50590d6b71e7d50051fc"
+      url "https://github.com/avala-ai/agent-code/releases/download/v0.16.0/agent-linux-aarch64.tar.gz"
+      sha256 "717aead3c38d429e8c306b4d12b594ee78251c0d3a891e13c1041fe092df225a"
     else
-      url "https://github.com/avala-ai/agent-code/releases/download/v0.15.3/agent-linux-x86_64.tar.gz"
-      sha256 "ae62b826a616593c9ba7677a47a5ba56d3369a6e2e9f92cbb2c5a1546ad38180"
+      url "https://github.com/avala-ai/agent-code/releases/download/v0.16.0/agent-linux-x86_64.tar.gz"
+      sha256 "d36fc8a3b8a0a80be71df2c6e30cdc763869cdba3607a9d5ea5080f70ad72e2e"
     end
   end
 
@@ -29,6 +29,6 @@ class AgentCode < Formula
   end
 
   test do
-    assert_match "agent 0.15.3", shell_output("#{bin}/agent --version")
+    assert_match "agent 0.16.0", shell_output("#{bin}/agent --version")
   end
 end
